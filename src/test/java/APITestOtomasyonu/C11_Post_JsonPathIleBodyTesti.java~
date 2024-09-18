@@ -1,5 +1,5 @@
 package APITestOtomasyonu;
-//15. ders 04:58e geldim.
+//15. derse geldim.
 
 import netscape.javascript.JSObject;
 import org.json.JSONObject;
@@ -14,7 +14,7 @@ public class C11_Post_JsonPathIleBodyTesti {
 
         JSONObject requestBody = new JSONObject();
         JSONObject rezervasyonTarihleri = new JSONObject();
-
+        
 
         //Set the expected data.
         //Send the request and get the response.
