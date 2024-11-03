@@ -1,0 +1,11 @@
+package APITestOtomasyonu.baseUrl;
+
+import io.restassured.specification.RequestSpecification;
+import org.junit.Before;
+
+public class BaseUrlDummyApi {
+    RequestSpecification specJsonPlaceHolderApi;
+    @Before
+    
+
+}

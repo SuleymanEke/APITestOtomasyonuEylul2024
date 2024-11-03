@@ -62,6 +62,7 @@ public class C14_Post_ExpectedDataVeJsonPathIleAssertion {
                 .when()
                 .body(requestBody.toString())
                 .post(url);
+        response.prettyPrint();
 
         //4 - Assertion.
 

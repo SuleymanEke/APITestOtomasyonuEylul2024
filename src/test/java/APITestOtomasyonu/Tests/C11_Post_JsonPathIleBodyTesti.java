@@ -1,4 +1,4 @@
-package APITestOtomasyonu;
+package APITestOtomasyonu.Tests;
 //15. ders.
 
 import io.restassured.http.ContentType;

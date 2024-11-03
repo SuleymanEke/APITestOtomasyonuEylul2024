@@ -1,14 +1,13 @@
-package APITestOtomasyonu;
+package APITestOtomasyonu.Tests;
 
 import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.lessThan;
 
-public class C03_Get_ResponseDegerleriniOtomasyonIleTestEtme {
+public class C02_GetRequest_ResponseBilgilerininManuelTestEdilmesi {
 
-        /*
+    /*
     https://restful-booker.herokuapp.com/booking/10 url'ine
     bir GET request gonderdigimizde donen Response'un,
     Status Code'un 200,
@@ -18,26 +17,24 @@ public class C03_Get_ResponseDegerleriniOtomasyonIleTestEtme {
     ve Response suresinin 5 sn'den kisa oldugunu manuel olarak test ediniz.
     */
 
+
     @Test
-    public void get03() {
+    public void get02() {
         //1 - Request Body ve End-Point hazirlama.
         String url = "https://restful-booker.herokuapp.com/booking/10";
 
         //2 - Expected Data hazirlama.
+
         //3 - Request gonderip, donen Response'i kaydetme.
         Response response = given().when().get(url);
         response.prettyPrint();
 
         //4 - Assertion.
-        response.
-                then().
-                assertThat().
-                statusCode(200).
-                contentType("application/json; charset=utf-8").
-                header("Server", "Cowboy").
-                statusLine("HTTP/1.1 200 OK");
-
-
+        System.out.println("Status Code: " + response.getStatusCode());
+        System.out.println("Content Type: " + response.getContentType());
+        System.out.println("Header: " + response.getHeader("Server"));
+        System.out.println("Status Line: " + response.getStatusLine());
+        System.out.println("Time: " + response.getTime()+" ms");
     }
 
 }

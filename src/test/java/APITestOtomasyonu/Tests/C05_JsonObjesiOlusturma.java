@@ -1,4 +1,4 @@
-package APITestOtomasyonu;
+package APITestOtomasyonu.Tests;
 
 import org.json.JSONObject;
 import org.junit.Test;

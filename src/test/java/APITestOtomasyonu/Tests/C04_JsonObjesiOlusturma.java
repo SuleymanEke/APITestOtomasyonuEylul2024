@@ -1,4 +1,4 @@
-package APITestOtomasyonu;
+package APITestOtomasyonu.Tests;
 
 import netscape.javascript.JSObject;
 import org.json.JSONObject;
