@@ -5,13 +5,13 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class BaseUrlJsonPlaceHolderApi {
-    protected RequestSpecification specJsonPlaceHolderApi;
+public class BaseUrlHerokuapp {
+    protected RequestSpecification specHerokuapp;
 
     @Before
     public void setUp() {
-        specJsonPlaceHolderApi = new RequestSpecBuilder()
-                .setBaseUri("https://jsonplaceholder.typicode.com")
+        specHerokuapp = new RequestSpecBuilder()
+                .setBaseUri("https://restful-booker.herokuapp.com")
                 .setContentType(ContentType.JSON)
                 .build();
     }

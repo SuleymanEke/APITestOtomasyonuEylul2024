@@ -6,11 +6,11 @@ import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
 public class BaseUrlJsonPlaceHolder {
-    protected RequestSpecification specJsonPlaceHolderApi;
+    protected RequestSpecification specJsonPlaceHolder;
 
     @Before
     public void setUp() {
-        specJsonPlaceHolderApi = new RequestSpecBuilder()
+        specJsonPlaceHolder = new RequestSpecBuilder()
                 .setBaseUri("https://jsonplaceholder.typicode.com")
                 .setContentType(ContentType.JSON)
                 .build();
