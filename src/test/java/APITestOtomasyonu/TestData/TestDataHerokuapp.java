@@ -1,4 +1,5 @@
 package APITestOtomasyonu.TestData;
 
-public class HerokuappTestDatalari {
+public class TestDataHerokuapp {
+
 }

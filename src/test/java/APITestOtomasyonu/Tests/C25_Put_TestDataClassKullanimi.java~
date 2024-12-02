@@ -32,6 +32,7 @@ public class C25_Put_TestDataClassKullanimi extends BaseUrlJsonPlaceHolder {
         Response response = given(specJsonPlaceHolder).when().body(requestBody.toString()).put("{pp1/pp2}");
         response.prettyPrint();
 
+
         //4 - Assertion.
         JsonPath responseJsonPath = response.jsonPath();
         assertEquals(expectedData.getInt("userId"), responseJsonPath.getInt("userId"));

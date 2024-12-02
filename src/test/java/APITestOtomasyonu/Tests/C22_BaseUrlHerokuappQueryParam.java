@@ -7,7 +7,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.*;
 
 public class C22_BaseUrlHerokuappQueryParam extends BaseUrlHerokuapp {
     /*
@@ -21,7 +21,7 @@ public class C22_BaseUrlHerokuappQueryParam extends BaseUrlHerokuapp {
     public void C22_BaseUrlHerokuappQueryParam(){
         //1 - Request url ve body olustur.
         specHerokuapp.pathParam("pp1", "booking")
-                .queryParams("firstname", "Susan", "lastname", "Jones");
+                .queryParams("firstname", "Jane", "lastname", "Doe");
 
         //2 - Soruda varsa expected data olustur.
         //3 - Response olustur, request gonderip sonucu response'i ata.
@@ -31,7 +31,7 @@ public class C22_BaseUrlHerokuappQueryParam extends BaseUrlHerokuapp {
         //4 - Assertion.
         response.then()
                 .assertThat()
-                .statusCode(200).body("bookingid", hasSize(1));
+                .statusCode(200).body("bookingid", hasSize(greaterThan(10)));
 
     }
 
